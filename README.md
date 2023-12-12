@@ -18,3 +18,13 @@ TestNG result is displayed into two windows:
 
 TestNG also generates HTML reports for the test executions. 
 These reports can be viewed in any of the browsers and it can also be viewed using Eclipse’s build –in browser support.
+
+## Strategy to employ Tendable challenge
+1. Firstly, I created a testNG class.
+2. Added @BeforeTest and @AfterTest methods
+- In @BeforeTest method, creates a new instance of the Chrome driver to open the browser and it will be executed before the first test case. 
+- In @AfterTest method, added close method to close the driver which will be executed after the last test case.
+3. Then, I created a first test method and assigned priority to 1. This test method will open the URL in the chrome browser.
+4. In second test method, inspect the elements and checked the accessibility of top-level menus: Home, Our Story, Our Solution, and Why Tendable?
+5. In third test method, navigated to contact us section and choose "Marketing" and then submit the form excluding the "Message" field. On clicking submit button, verified the error message.
+  
